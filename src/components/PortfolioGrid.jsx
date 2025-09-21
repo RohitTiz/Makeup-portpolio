@@ -147,68 +147,9 @@ const PortfolioGrid = () => {
                 style={{ backgroundImage: `url(${item.image})` }}
               />
               
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+              {/* Gradient Overlay - Reduced opacity to make images more visible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
               
-              {/* Text Content - Different positions for variety */}
-              <div className={`absolute inset-0 p-6 flex ${
-                index % 3 === 0 ? 'items-end justify-start' : 
-                index % 3 === 1 ? 'items-center justify-center text-center' : 
-                'items-start justify-end text-right'
-              }`}>
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                  className="text-white"
-                >
-                  {/* Category Tag with specialized colors */}
-                  <motion.span 
-                    className={`inline-block px-3 py-1 backdrop-blur-sm rounded-full text-xs font-medium tracking-wide uppercase mb-2 ${
-                      item.category === 'SFX' ? 'bg-purple-600/90 text-white' :
-                      item.category === 'Portrait' ? 'bg-gray-800/90 text-white' :
-                      item.category === 'Transform' ? 'bg-rose-600/90 text-white' :
-                      'bg-amber-600/90 text-white'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    {item.category}
-                  </motion.span>
-                  
-                  {/* Title with dynamic sizing */}
-                  <h3 className={`font-serif mb-2 leading-tight ${
-                    item.size === 'large' ? 'text-2xl md:text-3xl' : 
-                    item.size === 'medium' ? 'text-xl md:text-2xl' : 
-                    'text-lg md:text-xl'
-                  }`}>
-                    {item.title}
-                  </h3>
-                  
-                  {/* Description - only show on hover and for larger items */}
-                  {(item.size === 'large' || item.size === 'medium') && (
-                    <motion.p 
-                      className="text-sm text-gray-200 leading-relaxed max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={{ y: 10 }}
-                      whileHover={{ y: 0 }}
-                    >
-                      {item.description}
-                    </motion.p>
-                  )}
-                  
-                  {/* Interactive Element */}
-                  <motion.div 
-                    className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    whileHover={{ x: 5 }}
-                  >
-                    <div className="flex items-center space-x-2 text-amber-300">
-                      <span className="text-xs font-medium tracking-wide">VIEW WORK</span>
-                      <div className="w-8 h-px bg-amber-300"></div>
-                      <div className="w-1 h-1 bg-amber-300 rounded-full"></div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              </div>
-
               {/* Decorative Elements */}
               {index === 1 && (
                 <div className="absolute -top-6 -right-6 w-12 h-12 border border-amber-400 rounded-full opacity-50"></div>
@@ -241,16 +182,6 @@ const PortfolioGrid = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Custom Styles for 3D flip effect */}
-      <style jsx>{`
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-      `}</style>
     </section>
   );
 };
