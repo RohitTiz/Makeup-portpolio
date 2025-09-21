@@ -65,7 +65,17 @@ const Hero = () => {
         
         {/* Social links */}
         <div className="flex justify-center mt-12 space-x-6">
-          {['Instagram', 'Pinterest', 'YouTube'].map((platform) => (
+          <motion.a
+            href="https://www.instagram.com/glamup.arohii/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -3 }}
+            className="text-amber-50/70 hover:text-amber-300 text-sm uppercase tracking-widest transition-colors"
+          >
+            Instagram
+          </motion.a>
+          
+          {['Pinterest', 'YouTube'].map((platform) => (
             <motion.a
               key={platform}
               href="#"
