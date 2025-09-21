@@ -64,9 +64,10 @@ const VideoShowcase = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto mb-8 md:mb-12">
-          <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            {/* Video player for the vedio.mp4 */}
+        <div className="max-w-md mx-auto mb-8 md:mb-12">
+          {/* Changed container to vertical aspect ratio */}
+          <div className="relative aspect-[9/16] bg-gray-900 rounded-xl overflow-hidden shadow-2xl ring-2 ring-amber-500/20">
+            {/* Video player for the vedio.mp4 - constrained to vertical format */}
             <video
               ref={videoRef}
               className="w-full h-full object-cover"
@@ -76,17 +77,20 @@ const VideoShowcase = () => {
               preload="auto"
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
+              style={{ objectPosition: 'center center' }}
             >
               <source src="/vedio/vedio.mp4" type="video/mp4" />
-
               Your browser does not support the video tag.
             </video>
+            
+            {/* Gradient overlay for reel aesthetic */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60"></div>
             
             {/* Play/Pause button */}
             <div className="absolute inset-0 flex items-center justify-center">
               <button 
                 onClick={togglePlay}
-                className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all hover:bg-white/30"
+                className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all hover:bg-white/30 hover:scale-110"
               >
                 {isPlaying ? (
                   <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -103,7 +107,7 @@ const VideoShowcase = () => {
             {/* Mute/Unmute button */}
             <button 
               onClick={toggleMute}
-              className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center"
+              className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center backdrop-blur-sm hover:bg-black/70 transition-colors"
             >
               {isMuted ? (
                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -115,6 +119,17 @@ const VideoShowcase = () => {
                 </svg>
               )}
             </button>
+
+            {/* Reel-like progress bar at the top */}
+            <div className="absolute top-3 left-4 right-4 h-1 bg-white/30 rounded-full overflow-hidden">
+              <div className="h-full bg-white/80 rounded-full w-1/3"></div>
+            </div>
+
+            {/* Reel info text */}
+            <div className="absolute top-12 left-4 text-white">
+              <p className="text-sm font-medium">@arohi_makeovers</p>
+              <p className="text-xs opacity-80">Bridal Transformation</p>
+            </div>
           </div>
         </div>
 
