@@ -17,7 +17,7 @@ const PortfolioGrid = () => {
       id: 2,
       title: 'Editorial Portrait',
       category: 'Editorial',
-      image:"/portfolio/two.jpeg",
+      image:"/portfolio/four.jpeg",
       description: 'Professional editorial portraits with dramatic lighting and sophisticated monochrome aesthetics.',
       size: 'medium'
     },
