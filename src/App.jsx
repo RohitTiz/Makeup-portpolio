@@ -1,12 +1,9 @@
-import React from 'react'
+// App.jsx
+import React from 'react';
+import HomePage from './pages/HomePage';
 
 function App() {
-  return (
-    <>
-    <h1 className=" text-amber-300">heyyyy</h1>
-    <div>App</div>
-    </>
-  )
+  return <HomePage />;
 }
 
-export default App
+export default App;
