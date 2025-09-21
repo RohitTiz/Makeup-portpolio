@@ -9,7 +9,7 @@ const PortfolioGrid = () => {
       id: 1,
       title: 'Bridal Elegance',
       category: 'Bridal',
-      image: 'https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/one.jpeg",
       description: 'Timeless bridal beauty with delicate highlights and natural radiance for your most important day.',
       size: 'large'
     },
@@ -17,7 +17,7 @@ const PortfolioGrid = () => {
       id: 2,
       title: 'Editorial Portrait',
       category: 'Editorial',
-      image: 'https://images.pexels.com/photos/2531553/pexels-photo-2531553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/two.jpeg",
       description: 'Professional editorial portraits with dramatic lighting and sophisticated monochrome aesthetics.',
       size: 'medium'
     },
@@ -25,7 +25,7 @@ const PortfolioGrid = () => {
       id: 3,
       title: 'Party Glamour',
       category: 'Glam',
-      image: 'https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/three.jpeg",
       description: 'Stunning evening looks with shimmer and sophistication for unforgettable nights.',
       size: 'small'
     },
@@ -33,7 +33,7 @@ const PortfolioGrid = () => {
       id: 4,
       title: 'Character Artistry',
       category: 'SFX',
-      image: 'https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/one.jpeg",
       description: 'Special effects and character makeup including facial hair applications and transformative looks.',
       size: 'medium'
     },
@@ -41,7 +41,7 @@ const PortfolioGrid = () => {
       id: 5,
       title: 'Creative Expression',
       category: 'Artistic',
-      image: 'https://images.pexels.com/photos/458766/pexels-photo-458766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/two.jpeg",
       description: 'Avant-garde makeup artistry pushing boundaries of conventional beauty with bold color stories.',
       size: 'large'
     },
@@ -49,7 +49,7 @@ const PortfolioGrid = () => {
       id: 6,
       title: 'Natural Beauty',
       category: 'Natural',
-      image: 'https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/three.jpeg",
       description: 'Enhancing your natural features with subtle, fresh techniques that celebrate authenticity.',
       size: 'small'
     },
@@ -57,7 +57,7 @@ const PortfolioGrid = () => {
       id: 7,
       title: 'Portrait Mastery',
       category: 'Portrait',
-      image: 'https://images.pexels.com/photos/247878/pexels-photo-247878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/one.jpeg",
       description: 'Professional headshots and portrait work with emphasis on natural beauty and confident expression.',
       size: 'medium'
     },
@@ -65,7 +65,7 @@ const PortfolioGrid = () => {
       id: 8,
       title: 'Transformation Art',
       category: 'Transform',
-      image: 'https://images.pexels.com/photos/2780762/pexels-photo-2780762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image:"/portfolio/two.jpeg",
       description: 'Complete transformations showcasing versatility from elegant to avant-garde styling.',
       size: 'small'
     }
