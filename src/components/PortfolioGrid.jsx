@@ -41,7 +41,7 @@ const PortfolioGrid = () => {
       id: 5,
       title: 'Creative Expression',
       category: 'Artistic',
-      image:"/portfolio/two.jpeg",
+      image:"/portfolio/five.jpeg",
       description: 'Avant-garde makeup artistry pushing boundaries of conventional beauty with bold color stories.',
       size: 'large'
     },
