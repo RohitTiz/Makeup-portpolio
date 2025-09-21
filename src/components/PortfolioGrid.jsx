@@ -27,7 +27,7 @@ const PortfolioGrid = () => {
       category: 'Glam',
       image:"/portfolio/three.jpeg",
       description: 'Stunning evening looks with shimmer and sophistication for unforgettable nights.',
-      size: 'small'
+      size: 'medium' // Changed from 'small' to 'medium'
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const PortfolioGrid = () => {
       category: 'Natural',
       image:"/portfolio/three.jpeg",
       description: 'Enhancing your natural features with subtle, fresh techniques that celebrate authenticity.',
-      size: 'small'
+      size: 'medium' // Changed from 'small' to 'medium'
     },
     {
       id: 7,
@@ -67,7 +67,7 @@ const PortfolioGrid = () => {
       category: 'Transform',
       image:"/portfolio/two.jpeg",
       description: 'Complete transformations showcasing versatility from elegant to avant-garde styling.',
-      size: 'small'
+      size: 'medium' // Changed from 'small' to 'medium'
     }
   ];
 
@@ -79,10 +79,9 @@ const PortfolioGrid = () => {
         return `${baseClasses} col-span-2 row-span-2`;
       case 'medium':
         return `${baseClasses} col-span-2 row-span-1`;
-      case 'small':
-        return `${baseClasses} col-span-1 row-span-1`;
+      // Removed the 'small' case since we don't have any small items anymore
       default:
-        return `${baseClasses} col-span-1 row-span-1`;
+        return `${baseClasses} col-span-2 row-span-1`; // Default to medium
     }
   };
 
@@ -92,10 +91,9 @@ const PortfolioGrid = () => {
         return 'h-96 md:h-[500px]';
       case 'medium':
         return 'h-64 md:h-80';
-      case 'small':
-        return 'h-48 md:h-64';
+      // Removed the 'small' case
       default:
-        return 'h-64';
+        return 'h-64 md:h-80'; // Default to medium height
     }
   };
 
